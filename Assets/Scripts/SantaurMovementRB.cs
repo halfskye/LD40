@@ -1,6 +1,5 @@
-﻿using System.Collections;
+﻿using UnityEngine;
 using System.Collections.Generic;
-using UnityEngine;
 
 public class SantaurMovementRB : MonoBehaviour {
 
@@ -15,6 +14,11 @@ public class SantaurMovementRB : MonoBehaviour {
     private bool _keyRight() { return (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)); }
     private bool _keyPresents() { return (Input.GetKeyDown(KeyCode.Space)); }
 
+    //Object Pooling
+    public GameObject present;
+    private List<GameObject> _presentPool;
+    public int PresentAmountTotal = 100;
+
     // Use this for initialization
     void Start () {
         rb = GetComponent<Rigidbody2D>();
@@ -25,7 +29,15 @@ public class SantaurMovementRB : MonoBehaviour {
         leftWall = -5;
         rightWall = 5;
         ceiling = 3.2f;
-	}
+
+        _presentPool = new List<GameObject>();
+        for (int j = 0; j < PresentAmountTotal; j++)
+        {
+            GameObject obj = Instantiate(present);
+            obj.SetActive(false);
+            _presentPool.Add(obj);
+        }
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -79,8 +91,35 @@ public class SantaurMovementRB : MonoBehaviour {
     //Spawns present beneath the sleigh
     public void SpawnPresent()
     {
-        var pos = new Vector2(transform.position.x - .6f, transform.position.y - .47f);
-        Instantiate(Resources.Load("Presents"), pos, transform.rotation);
-        rb.AddForce(Vector2.up * boost);
+        if (_presentPool != null)
+        {
+            GameObject obj = GetPooledObject();
+            if (obj != null)
+            {
+                //Boost ship up
+                rb.AddForce(Vector2.up * boost);
+
+                //Activate Pooled Present
+                var pos = new Vector2(transform.position.x - .6f, transform.position.y - .47f);
+                obj.transform.position = pos;
+                obj.SetActive(true);
+            }
+        }
+        else
+        {
+            Debug.Log("Add a Present Object to the SantaurMovementRB Script JackoFFFF!!!!");
+        }
+    }
+
+    public GameObject GetPooledObject()
+    {
+        for (int i = 0; i < _presentPool.Count; i++)
+        {
+            if (!_presentPool[i].activeInHierarchy)
+            {
+                return _presentPool[i];
+            }
+        }
+        return null;
     }
 }
