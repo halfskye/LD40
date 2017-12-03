@@ -11,7 +11,7 @@ namespace Assets.Scripts
         //Object Pooling
         private List<GameObject> _housePool;
         public int HouseAmountTotal = 15;
-        public int HouseAmountSingle = 5;
+        public int HouseAmountSingle = 3;
 
         //Time to spawn
         public float waitForNext = 10;
@@ -25,11 +25,11 @@ namespace Assets.Scripts
         public float yMin;
         public float yMax;
 
-        private Vector2 _pos;
+        private Vector3 _pos;
 
         void Start()
         {
-            _pos = new Vector2(Random.Range(xMin, xMax), Random.Range(yMin, yMax));
+            _pos = new Vector3(Random.Range(xMin, xMax), Random.Range(yMin, yMax), transform.position.z);
             _housePool = new List<GameObject>();
             foreach (var house in Houses)
             {

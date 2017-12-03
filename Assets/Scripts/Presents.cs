@@ -6,13 +6,13 @@ public class Presents : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        floorCleanup = -5f;
+        floorCleanup = -7.13f;
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
-        if (transform.position.y < floorCleanup)
+	void Update ()
+    {
+        if (transform.position.x < floorCleanup)
         {
             gameObject.SetActive(false);
         }
@@ -20,19 +20,21 @@ public class Presents : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.tag == "House")
+        {
+            if (CameraShake.ReturnShake() != null)
+            {
+                CameraShake.ReturnShake().Shake(0.05f, 0.1f);
+            }
+            else
+            {
+                Debug.Log("Cam Script is null");
+            }
+        }
+
         if (collision.gameObject.name == "Chimney")
         {       
             gameObject.SetActive(false);
         }
-
-        if (collision.gameObject.tag == "House")
-        {
-            ShakeCamera(Camera.main.gameObject);
-        }
-    }
-
-    private void ShakeCamera(GameObject obj)
-    {
-        obj.GetComponent<CameraScript>().ShakeCam();
     }
 }

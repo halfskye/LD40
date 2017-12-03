@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4010978619628094}
   - component: {fileID: 212821737025939656}
   - component: {fileID: 50979517570441578}
-  - component: {fileID: 61405434081220326}
   - component: {fileID: 114382739837866038}
+  - component: {fileID: 61308901762214136}
   m_Layer: 0
   m_Name: Test-House1
   m_TagString: House
@@ -54,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000155131584568}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.595007, y: -3.2239718, z: 10}
+  m_LocalPosition: {x: -20.556625, y: 10.891397, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4084130784853762}
@@ -114,7 +114,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 2
---- !u!61 &61405434081220326
+--- !u!61 &61308901762214136
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -126,18 +126,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.8128372}
+  m_Offset: {x: -0.048669815, y: 0.027897358}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 1.7, y: 1.87}
+    oldSize: {x: 2.15, y: 1.33}
     newSize: {x: 1.7, y: 1.87}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.7, y: 1.6256744}
+  m_Size: {x: 1.0422058, y: 1.6861944}
   m_EdgeRadius: 0
 --- !u!61 &61714201594313844
 BoxCollider2D:
@@ -151,7 +151,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.35995436, y: 1.750633}
+  m_Offset: {x: 0.04339409, y: 1.0318465}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -162,7 +162,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5248594, y: 0.22500658}
+  m_Size: {x: 0.39823532, y: 0.48502445}
   m_EdgeRadius: 0
 --- !u!114 &114382739837866038
 MonoBehaviour:
@@ -210,7 +210,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5eaa4c211fc5c6844b933ea9f3a42ba9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a4fc4e50342c16a42bb08bdc537638e0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
