@@ -27,6 +27,21 @@ namespace Assets.Scripts
 
         private Vector3 _pos;
 
+        [SerializeField]
+        private float _houseSpeed = 3.0f;
+        public float GetHouseSpeed() {
+          return _houseSpeed;
+        }
+
+        static private HouseRando _singleton = null;
+        static public HouseRando Get() {
+          return _singleton;
+        }
+
+        private void Awake() {
+          _singleton = this;
+        }
+
         void Start()
         {
             _pos = new Vector3(Random.Range(xMin, xMax), Random.Range(yMin, yMax), transform.position.z);
@@ -62,7 +77,7 @@ namespace Assets.Scripts
                 {
                     gameObj.transform.position = _pos;
                     gameObj.SetActive(true);
-                } 
+                }
             }
             else
             {
