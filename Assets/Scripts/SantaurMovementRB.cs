@@ -15,9 +15,9 @@ public class SantaurMovementRB : MonoBehaviour {
     private bool _keyPresents() { return (Input.GetKeyDown(KeyCode.Space)); }
 
     //Object Pooling
-    public GameObject present;
+    public GameObject[] Presents;
     private List<GameObject> _presentPool;
-    public int PresentAmountTotal = 100;
+    public int PresentAmountEach = 100;
 
     // Use this for initialization
     void Start () {
@@ -31,11 +31,14 @@ public class SantaurMovementRB : MonoBehaviour {
         ceiling = 3.2f;
 
         _presentPool = new List<GameObject>();
-        for (int j = 0; j < PresentAmountTotal; j++)
+        foreach (var present in Presents)
         {
-            GameObject obj = Instantiate(present);
-            obj.SetActive(false);
-            _presentPool.Add(obj);
+            for (int j = 0; j < PresentAmountEach; j++)
+            {
+                GameObject obj = Instantiate(present);
+                obj.SetActive(false);
+                _presentPool.Add(obj);
+            }
         }
     }
 
@@ -116,11 +119,12 @@ public class SantaurMovementRB : MonoBehaviour {
 
     public GameObject GetPooledObject()
     {
-        for (int i = 0; i < _presentPool.Count; i++)
+        if (_presentPool != null)
         {
-            if (!_presentPool[i].activeInHierarchy)
+            GameObject gameObj = _presentPool[Random.Range(0, _presentPool.Count)];
+            if (!gameObj.activeInHierarchy)
             {
-                return _presentPool[i];
+                return gameObj;
             }
         }
         return null;
