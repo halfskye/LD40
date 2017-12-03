@@ -11,7 +11,6 @@ public class BG : MonoBehaviour {
     void Start()
     {
         _rigidBody = GetComponent<Rigidbody2D>();
-        _rigidBody.velocity = new Vector2(-Speed, 0);
     }
 
     // Update is called once per frame
@@ -22,7 +21,7 @@ public class BG : MonoBehaviour {
         }
         else
         {
-            _rigidBody.velocity = new Vector2(-Speed, 0);
+            _rigidBody.transform.Translate(Vector2.left * Speed * Time.deltaTime);
         }
 	}
 }
