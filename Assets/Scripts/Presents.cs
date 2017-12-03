@@ -25,6 +25,7 @@ public class Presents : MonoBehaviour {
             if (CameraShake.ReturnShake() != null)
             {
                 CameraShake.ReturnShake().Shake(0.05f, 0.1f);
+                SoundController.PresentHouseHit.Play();
             }
             else
             {
@@ -43,5 +44,6 @@ public class Presents : MonoBehaviour {
 
       Player player = Player.Get();
       player.PresentDelivered();
+        SoundController.Chimney.Play();
     }
 }

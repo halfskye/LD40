@@ -101,6 +101,7 @@ public class SantaurMovementRB : MonoBehaviour {
             {
                 //Boost ship up
                 rb.AddForce(Vector2.up * boost);
+                SoundController.ReleasePresent.Play();
 
                 //Activate Pooled Present
                 var pos = new Vector2(transform.position.x - .6f, transform.position.y - .47f);
