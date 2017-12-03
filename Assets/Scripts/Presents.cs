@@ -8,7 +8,7 @@ public class Presents : MonoBehaviour {
     void Start () {
         floorCleanup = -7.13f;
 	}
-	
+
 	// Update is called once per frame
 	void Update ()
     {
@@ -33,8 +33,15 @@ public class Presents : MonoBehaviour {
         }
 
         if (collision.gameObject.name == "Chimney")
-        {       
-            gameObject.SetActive(false);
+        {
+            EnterChimney();
         }
+    }
+
+    private void EnterChimney() {
+      gameObject.SetActive(false);
+
+      Player player = Player.Get();
+      player.PresentDelivered();
     }
 }

@@ -38,13 +38,13 @@ public class SantaurMovementRB : MonoBehaviour {
             _presentPool.Add(obj);
         }
     }
-	
+
 	// Update is called once per frame
 	void Update () {
-              
+
         Movement();
         Barriers();
-        
+
         if (_keyPresents())
         {
             SpawnPresent();
@@ -109,6 +109,9 @@ public class SantaurMovementRB : MonoBehaviour {
         {
             Debug.Log("Add a Present Object to the SantaurMovementRB Script JackoFFFF!!!!");
         }
+
+        Player player = Player.Get();
+        player.UsePresent();
     }
 
     public GameObject GetPooledObject()
