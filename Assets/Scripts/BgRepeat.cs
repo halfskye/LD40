@@ -13,7 +13,7 @@ public class BgRepeat : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (transform.position.x < -_bgSize * 0.5f)
+        if (transform.position.x < -_bgSize)
         {
             RepeatBG();
         }
@@ -21,7 +21,7 @@ public class BgRepeat : MonoBehaviour {
 
     void RepeatBG()
     {
-        Vector3 bgOffset = new Vector3(_bgSize * 2.5f, 0);
+        Vector3 bgOffset = new Vector3(_bgSize * 2f, 0);
         transform.position += bgOffset;
     }
 }

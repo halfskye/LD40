@@ -10,12 +10,12 @@ namespace Assets.Scripts
 
         //Object Pooling
         private List<GameObject> _housePool;
-        public int HouseAmountTotal = 15;
-        public int HouseAmountSingle = 3;
+        public int HouseAmountTotal;
+        public int HouseAmountSingle;
 
         //Time to spawn
-        public float waitForNext = 10;
-        public float countDown = 10;
+        public float waitForNext;
+        public float countDown;
 
         //X Range
         public float xMin;

@@ -210,7 +210,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 321995313}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 100}
+  m_LocalPosition: {x: 0, y: 0, z: 150}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 19403215}
@@ -282,7 +282,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 362727431}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 984882581}
@@ -399,7 +399,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stopScrolling: 0
-  Speed: 0.3
+  Speed: 2
 --- !u!114 &503102194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -434,7 +434,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 15, y: 10}
+  m_Size: {x: 30, y: 10}
   m_EdgeRadius: 0
 --- !u!1 &522739557
 GameObject:
@@ -705,10 +705,10 @@ MonoBehaviour:
   - {fileID: 1904879881223672, guid: 94563e53870217349b77273782d054f9, type: 2}
   - {fileID: 1904879881223672, guid: 2c74ccf5f8faff34995122e80c3714d3, type: 2}
   - {fileID: 1904879881223672, guid: 20104137ef6e7fe49b1cd9be79bf4bc2, type: 2}
-  HouseAmountTotal: 15
-  HouseAmountSingle: 5
+  HouseAmountTotal: 24
+  HouseAmountSingle: 3
   waitForNext: 1
-  countDown: 0.5
+  countDown: 1
   xMin: 9.5
   xMax: 9.5
   yMin: -3.35
@@ -720,7 +720,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 816727789}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.49, y: -3.377, z: 10}
+  m_LocalPosition: {x: 9.49, y: -3.377, z: 4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -736,9 +736,9 @@ GameObject:
   - component: {fileID: 823849965}
   - component: {fileID: 823849969}
   - component: {fileID: 823849968}
+  - component: {fileID: 823849970}
   - component: {fileID: 823849967}
   - component: {fileID: 823849966}
-  - component: {fileID: 823849970}
   m_Layer: 0
   m_Name: scroll-front
   m_TagString: Untagged
@@ -782,7 +782,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 28.9, y: 1.9499999}
+  m_Size: {x: 30, y: 1.9499999}
   m_EdgeRadius: 0
 --- !u!50 &823849967
 Rigidbody2D:
@@ -871,7 +871,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stopScrolling: 0
-  Speed: 2
+  Speed: 4
 --- !u!1 &864806598
 GameObject:
   m_ObjectHideFlags: 0
@@ -882,8 +882,8 @@ GameObject:
   - component: {fileID: 864806599}
   - component: {fileID: 864806604}
   - component: {fileID: 864806603}
-  - component: {fileID: 864806602}
   - component: {fileID: 864806601}
+  - component: {fileID: 864806602}
   - component: {fileID: 864806600}
   m_Layer: 0
   m_Name: Test-Floor (1)
@@ -973,7 +973,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stopScrolling: 0
-  Speed: 0.7
+  Speed: 4
 --- !u!212 &864806604
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1089,7 +1089,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 984882579}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 100}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 362727432}
@@ -1127,7 +1127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stopScrolling: 0
-  Speed: 0.2
+  Speed: 1
 --- !u!114 &984882584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1162,7 +1162,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 15, y: 10}
+  m_Size: {x: 30, y: 10}
   m_EdgeRadius: 0
 --- !u!1 &1012557370
 GameObject:
@@ -1174,9 +1174,9 @@ GameObject:
   - component: {fileID: 1012557371}
   - component: {fileID: 1012557375}
   - component: {fileID: 1012557374}
+  - component: {fileID: 1012557376}
   - component: {fileID: 1012557373}
   - component: {fileID: 1012557372}
-  - component: {fileID: 1012557376}
   m_Layer: 0
   m_Name: scroll-back
   m_TagString: Untagged
@@ -1191,7 +1191,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1012557370}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.66, z: 10}
+  m_LocalPosition: {x: 0, y: -2.66, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1446472183}
@@ -1220,7 +1220,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 25.849998, y: 2.2099998}
+  m_Size: {x: 30, y: 2.2099998}
   m_EdgeRadius: 0
 --- !u!50 &1012557373
 Rigidbody2D:
@@ -1309,7 +1309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stopScrolling: 0
-  Speed: 2
+  Speed: 4
 --- !u!1 &1091482315
 GameObject:
   m_ObjectHideFlags: 0
@@ -1320,8 +1320,8 @@ GameObject:
   - component: {fileID: 1091482317}
   - component: {fileID: 1091482316}
   - component: {fileID: 1091482319}
-  - component: {fileID: 1091482318}
   - component: {fileID: 1091482320}
+  - component: {fileID: 1091482318}
   - component: {fileID: 1091482321}
   m_Layer: 0
   m_Name: Test-Floor
@@ -1419,7 +1419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stopScrolling: 0
-  Speed: 0.7
+  Speed: 4
 --- !u!114 &1091482320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1466,9 +1466,9 @@ GameObject:
   - component: {fileID: 1123139066}
   - component: {fileID: 1123139070}
   - component: {fileID: 1123139069}
+  - component: {fileID: 1123139071}
   - component: {fileID: 1123139068}
   - component: {fileID: 1123139067}
-  - component: {fileID: 1123139071}
   m_Layer: 0
   m_Name: scroll-back (1)
   m_TagString: Untagged
@@ -1483,7 +1483,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1123139065}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 25.85, y: -2.66, z: 10}
+  m_LocalPosition: {x: 30, y: -2.66, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1446472183}
@@ -1512,7 +1512,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 25.849998, y: 2.2099998}
+  m_Size: {x: 30, y: 2.2099998}
   m_EdgeRadius: 0
 --- !u!50 &1123139068
 Rigidbody2D:
@@ -1601,7 +1601,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stopScrolling: 0
-  Speed: 2
+  Speed: 4
 --- !u!1 &1203344081
 GameObject:
   m_ObjectHideFlags: 0
@@ -1739,7 +1739,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stopScrolling: 0
-  Speed: 0.5
+  Speed: 3
 --- !u!212 &1285601891
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1861,7 +1861,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1478565444932728, guid: fc638d31574ed4d479b50febc6ba49ee, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fc638d31574ed4d479b50febc6ba49ee, type: 2}
@@ -2068,9 +2068,9 @@ GameObject:
   - component: {fileID: 1864348978}
   - component: {fileID: 1864348977}
   - component: {fileID: 1864348976}
-  - component: {fileID: 1864348975}
   - component: {fileID: 1864348979}
   - component: {fileID: 1864348980}
+  - component: {fileID: 1864348975}
   m_Layer: 0
   m_Name: Test-Paralax1
   m_TagString: Untagged
@@ -2078,26 +2078,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!50 &1864348975
-Rigidbody2D:
-  serializedVersion: 4
+--- !u!61 &1864348975
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1864348974}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 30.000002, y: 10.000001}
+    newSize: {x: 15, y: 10}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 30.000002, y: 10.000001}
+  m_EdgeRadius: 0
 --- !u!114 &1864348976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2110,7 +2115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stopScrolling: 0
-  Speed: 0.5
+  Speed: 3
 --- !u!212 &1864348977
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2179,31 +2184,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0007b8c93d3f66a4098ecfb7af34fbd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!61 &1864348980
-BoxCollider2D:
+--- !u!50 &1864348980
+Rigidbody2D:
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1864348974}
-  m_Enabled: 1
-  m_Density: 1
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 30.000002, y: 10.000001}
-    newSize: {x: 15, y: 10}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 30.000002, y: 10.000001}
-  m_EdgeRadius: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1892641721
 GameObject:
   m_ObjectHideFlags: 0
@@ -2269,7 +2269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stopScrolling: 0
-  Speed: 0.3
+  Speed: 2
 --- !u!212 &1892641725
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2377,7 +2377,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2085329406}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 30, y: 0, z: 100}
+  m_LocalPosition: {x: 30, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 362727432}
@@ -2415,7 +2415,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stopScrolling: 0
-  Speed: 0.2
+  Speed: 1
 --- !u!212 &2085329410
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2506,9 +2506,9 @@ GameObject:
   - component: {fileID: 2118883242}
   - component: {fileID: 2118883246}
   - component: {fileID: 2118883245}
+  - component: {fileID: 2118883247}
   - component: {fileID: 2118883244}
   - component: {fileID: 2118883243}
-  - component: {fileID: 2118883247}
   m_Layer: 0
   m_Name: scroll-front (1)
   m_TagString: Untagged
@@ -2523,7 +2523,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2118883241}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 28.9, y: -2.66, z: 0}
+  m_LocalPosition: {x: 30, y: -2.66, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1579034692}
@@ -2552,7 +2552,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 28.9, y: 1.9499999}
+  m_Size: {x: 30, y: 1.9499999}
   m_EdgeRadius: 0
 --- !u!50 &2118883244
 Rigidbody2D:
@@ -2641,4 +2641,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stopScrolling: 0
-  Speed: 2
+  Speed: 4

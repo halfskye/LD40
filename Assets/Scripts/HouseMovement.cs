@@ -6,7 +6,7 @@ public class HouseMovement : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(Vector2.left * Time.deltaTime * Speed);
+        transform.Translate(Vector2.left * Speed);
     }
 
     void OnTriggerEnter2D(Collider2D collision)
