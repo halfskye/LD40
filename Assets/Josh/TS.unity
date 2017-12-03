@@ -872,7 +872,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stopScrolling: 0
-  Speed: 4
+  Speed: 3
 --- !u!1 &864806598
 GameObject:
   m_ObjectHideFlags: 0
@@ -974,7 +974,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stopScrolling: 0
-  Speed: 4
+  Speed: 3
 --- !u!212 &864806604
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1310,7 +1310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stopScrolling: 0
-  Speed: 4
+  Speed: 3
 --- !u!1 &1091482315
 GameObject:
   m_ObjectHideFlags: 0
@@ -1420,7 +1420,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stopScrolling: 0
-  Speed: 4
+  Speed: 3
 --- !u!114 &1091482320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1602,7 +1602,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stopScrolling: 0
-  Speed: 4
+  Speed: 3
 --- !u!1 &1203344081
 GameObject:
   m_ObjectHideFlags: 0
@@ -1862,7 +1862,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1478565444932728, guid: fc638d31574ed4d479b50febc6ba49ee, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fc638d31574ed4d479b50febc6ba49ee, type: 2}
@@ -2642,4 +2642,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stopScrolling: 0
-  Speed: 4
+  Speed: 3
