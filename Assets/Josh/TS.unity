@@ -713,6 +713,7 @@ MonoBehaviour:
   xMax: 9.5
   yMin: -3.35
   yMax: -3.35
+  _houseSpeed: 3
 --- !u!4 &816727791
 Transform:
   m_ObjectHideFlags: 0
