@@ -12,6 +12,9 @@ public class Player : MonoBehaviour {
 	public void UsePresent() {
 		_presentCount -= 1;
 	}
+	public void ReceivePresents(int amount) {
+		_presentCount += amount;
+	}
 
 	private int _score = 0;
 	public int GetScore() {
