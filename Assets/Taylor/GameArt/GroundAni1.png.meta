@@ -1,0 +1,310 @@
+fileFormatVersion: 2
+guid: 43b610e75409ee94db9fc5f21feca5b6
+timeCreated: 1512341602
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: GroundAni_000
+    21300002: GroundAni_001
+    21300004: GroundAni_002
+    21300006: GroundAni_003
+    21300008: GroundAni_004
+    21300010: GroundAni_005
+    21300012: GroundAni_006
+    21300014: GroundAni_007
+    21300016: GroundAni_008
+    21300018: GroundAni_009
+    21300020: GroundAni_010
+    21300022: GroundAni_011
+    21300024: GroundAni_012
+    21300026: GroundAni_013
+    21300028: GroundAni_014
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GroundAni_000
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 3584
+        width: 2846
+        height: 169
+      alignment: 9
+      pivot: {x: 0.4729445, y: 0.5443787}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: GroundAni_001
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2900
+        width: 2842
+        height: 169
+      alignment: 9
+      pivot: {x: 0.4722027, y: 0.5443787}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: GroundAni_002
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2216
+        width: 2837
+        height: 169
+      alignment: 9
+      pivot: {x: 0.47127247, y: 0.5443787}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: GroundAni_003
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1532
+        width: 2833
+        height: 169
+      alignment: 9
+      pivot: {x: 0.47052595, y: 0.5443787}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: GroundAni_004
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1703
+        width: 2834
+        height: 169
+      alignment: 9
+      pivot: {x: 0.47071278, y: 0.5443787}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: GroundAni_005
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1874
+        width: 2835
+        height: 169
+      alignment: 9
+      pivot: {x: 0.47089946, y: 0.5443787}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: GroundAni_006
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2045
+        width: 2836
+        height: 169
+      alignment: 9
+      pivot: {x: 0.47108603, y: 0.5443787}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: GroundAni_007
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2558
+        width: 2840
+        height: 169
+      alignment: 9
+      pivot: {x: 0.471831, y: 0.5443787}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: GroundAni_008
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 3926
+        width: 2849
+        height: 169
+      alignment: 9
+      pivot: {x: 0.47349948, y: 0.5443787}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: GroundAni_009
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 3755
+        width: 2849
+        height: 169
+      alignment: 9
+      pivot: {x: 0.47349948, y: 0.5443787}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: GroundAni_010
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 3242
+        width: 2844
+        height: 169
+      alignment: 9
+      pivot: {x: 0.47257385, y: 0.5443787}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: GroundAni_011
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2387
+        width: 2838
+        height: 169
+      alignment: 9
+      pivot: {x: 0.47145876, y: 0.5443787}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: GroundAni_012
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2729
+        width: 2842
+        height: 169
+      alignment: 9
+      pivot: {x: 0.4722027, y: 0.5443787}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: GroundAni_013
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 3071
+        width: 2844
+        height: 169
+      alignment: 9
+      pivot: {x: 0.47257385, y: 0.5443787}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: GroundAni_014
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 3413
+        width: 2845
+        height: 169
+      alignment: 9
+      pivot: {x: 0.47275922, y: 0.5443787}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
