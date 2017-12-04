@@ -48,7 +48,8 @@ public class Player : MonoBehaviour {
 	}
 
 	private void UpdateMassOnPresents() {
-		float newMass = ((float)(_presentCount) / (float)(PRESENT_COUNT_START));
+		float presentMassNumerator = Mathf.Max(_presentCount, PRESENT_COUNT_START);
+		float newMass = (presentMassNumerator / (float)(PRESENT_COUNT_START));
 		_rigidBody.mass = newMass;
 	}
 
