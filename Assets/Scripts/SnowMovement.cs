@@ -5,6 +5,7 @@ public class SnowMovement : MonoBehaviour {
 
     void Update()
     {
+        transform.Rotate(Vector3.left * Time.deltaTime * 10);
         transform.Translate(Vector2.down * SnowRando.Get().GetSnowSpeed() * Time.deltaTime);
     }
 

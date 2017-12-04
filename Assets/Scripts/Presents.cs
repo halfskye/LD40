@@ -25,7 +25,6 @@ public class Presents : MonoBehaviour {
     // Update is called once per frame
     void Update ()
     {
-
         if (_isOngGround)
         {
             _presentTranform.Translate(-HouseRando.Get().GetHouseSpeed() * Time.deltaTime, 0, 0);
@@ -52,7 +51,7 @@ public class Presents : MonoBehaviour {
 
     private void EnterChimney() {
 
-        //PresentController.Get().ChimneyExploder(transform.position);
+        PresentController.Get().ChimneyExploder(transform.position);
         Player player = Player.Get();
         player.PresentDelivered();
         SoundController.Chimney.Play();

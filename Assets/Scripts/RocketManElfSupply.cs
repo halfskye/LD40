@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class RocketManElfSupply : MonoBehaviour {
 
+    [SerializeField]
+    private GameObject _starExploder = null;
+
 	[SerializeField]
 	private float _speed = 10;
 
@@ -106,13 +109,22 @@ public class RocketManElfSupply : MonoBehaviour {
 		if(_timer < 0.0f) {
 			GivePresents();
 			StartJetOff();
-		}
+            StarExploder(Player.Get().GetPos());
+        }
 	}
 
 	private void GivePresents() {
 		Player player = Player.Get();
 		player.ReceivePresents(_presentSupplyCount);
 	}
+
+    private void StarExploder(Vector3 pos)
+    {
+        GameObject explode = Instantiate(_starExploder);
+        pos.x = pos.x - 1;
+        pos.y = pos.y + 0.5f;
+        explode.transform.position = pos;
+    }
 
 	private void UpdateJetOff() {
 	}

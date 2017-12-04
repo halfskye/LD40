@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 namespace Assets.Scripts
 {
@@ -27,6 +28,12 @@ namespace Assets.Scripts
         {
             GameObject explode = Instantiate(_presentExploder);
             explode.transform.position = pos;
+        }
+
+        IEnumerator DestroyExplode(float delay, GameObject obj)
+        {
+            yield return new WaitForSeconds(delay);
+            Destroy(obj);
         }
     }
 }

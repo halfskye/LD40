@@ -44,7 +44,7 @@ public class Player : MonoBehaviour {
 	}
 
 	public Vector2 GetPos() {
-		return transform.position;
+            return transform.position;
 	}
 
 	public void PresentDelivered() {

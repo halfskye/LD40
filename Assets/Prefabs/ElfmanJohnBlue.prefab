@@ -117,6 +117,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9d668223a0c34371993e1b8d5ff2055, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _starExploder: {fileID: 1650543262597818, guid: 4be146ded5ac10545bbe51a9f3cf2b00,
+    type: 2}
   _speed: 10
   _presentSupplyCount: 50
   _settleInTime: 0.5
