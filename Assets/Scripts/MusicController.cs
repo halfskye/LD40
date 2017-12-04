@@ -11,7 +11,7 @@ public class MusicController : MonoBehaviour {
     // Use this for initialization
     void Awake () {
 
-        CheckScene();
+        //CheckScene();
         AudioSource[] audio = GetComponents<AudioSource>();
 
         SpecialDelivery = audio[0];
@@ -34,16 +34,16 @@ public class MusicController : MonoBehaviour {
         SpecialDelivery.volume = StartVolume;
     }
 
-    public void CheckScene()
-    {
-        Scene scene = SceneManager.GetActiveScene();
-        string sceneName = scene.name;
-        Debug.Log("Active scene is '" + scene.name + "'.");
+    //public void CheckScene()
+    //{
+    //    Scene scene = SceneManager.GetActiveScene();
+    //    string sceneName = scene.name;
+    //    Debug.Log("Active scene is '" + scene.name + "'.");
 
 
-        if ((sceneName == "TS"))
-        {
-            TitleController.SantaursSleigh.Stop();
-        }
-    }
+    //    if ((sceneName == "TS"))
+    //    {
+    //        TitleController.SantaursSleigh.Stop();
+    //    }
+    //}
 }

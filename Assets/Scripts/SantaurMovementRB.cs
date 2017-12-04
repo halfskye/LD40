@@ -21,6 +21,9 @@ public class SantaurMovementRB : MonoBehaviour {
 
     private Player _player = null;
 
+    public float FireRate;
+    private float _nextFire;
+
     // Use this for initialization
     void Start () {
         rb = GetComponent<Rigidbody2D>();
@@ -52,8 +55,9 @@ public class SantaurMovementRB : MonoBehaviour {
         Movement();
         Barriers();
 
-        if (_keyPresents() && _player.HasPresents())
+        if (_keyPresents() && _player.HasPresents() && (Time.time > _nextFire))
         {
+            _nextFire = Time.time + FireRate;
             SpawnPresent();
         }
     }

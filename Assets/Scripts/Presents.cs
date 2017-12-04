@@ -1,20 +1,35 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts;
+using UnityEngine;
 
 public class Presents : MonoBehaviour {
 
     private float floorCleanup;
+    private bool _isOngGround = false;
+    private Transform _presentTranform;
 
     // Use this for initialization
     void Start () {
+        _presentTranform = transform;
         floorCleanup = -7.13f;
 	}
 
-	// Update is called once per frame
-	void Update ()
+    private void FixedUpdate()
     {
-        if (transform.position.x < floorCleanup)
+        if (transform.position.x <= floorCleanup)
         {
+            _isOngGround = false;
             gameObject.SetActive(false);
+        }
+    }
+
+    // Update is called once per frame
+    void Update ()
+    {
+
+        if (_isOngGround)
+        {
+            _presentTranform.Translate(-HouseRando.Get().GetHouseSpeed() * Time.deltaTime, 0, 0);
+            //_presentPosition.x -= 800 * Time.deltaTime;
         }
     }
 
@@ -26,11 +41,18 @@ public class Presents : MonoBehaviour {
             {
                 CameraShake.ReturnShake().Shake(0.05f, 0.1f);
                 SoundController.PresentHouseHit.Play();
+
+                gameObject.SetActive(false);
             }
             else
             {
                 Debug.Log("Cam Script is null");
             }
+        }
+
+        if (collision.gameObject.tag == "Floor")
+        {
+            _isOngGround = true;
         }
 
         if (collision.gameObject.name == "Chimney")
@@ -40,10 +62,10 @@ public class Presents : MonoBehaviour {
     }
 
     private void EnterChimney() {
-      gameObject.SetActive(false);
+        gameObject.SetActive(false);
 
-      Player player = Player.Get();
-      player.PresentDelivered();
+        Player player = Player.Get();
+        player.PresentDelivered();
         SoundController.Chimney.Play();
     }
 }

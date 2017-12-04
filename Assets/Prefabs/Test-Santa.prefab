@@ -143,6 +143,7 @@ MonoBehaviour:
   - {fileID: 1903480404798066, guid: 649df1f823595564392c04e67a314364, type: 2}
   - {fileID: 1903480404798066, guid: 23cea6f4efe91e34ca891f2c94ad2bb2, type: 2}
   PresentAmountEach: 10
+  FireRate: 0.25
 --- !u!114 &114335757679753930
 MonoBehaviour:
   m_ObjectHideFlags: 1
