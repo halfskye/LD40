@@ -14,7 +14,7 @@ namespace Assets.Scripts
         public int HouseAmountSingle;
 
         //Time to spawn
-        public float waitForNext;
+        public float waitForNextMax;
         public float countDown;
 
         //X Range
@@ -64,7 +64,7 @@ namespace Assets.Scripts
             if (countDown <= 0)
             {
                 SpawnHouse();
-                countDown = waitForNext;
+                countDown = Random.Range(1, waitForNextMax);
             }
         }
 
