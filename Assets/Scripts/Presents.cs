@@ -29,7 +29,6 @@ public class Presents : MonoBehaviour {
         if (_isOngGround)
         {
             _presentTranform.Translate(-HouseRando.Get().GetHouseSpeed() * Time.deltaTime, 0, 0);
-            //_presentPosition.x -= 800 * Time.deltaTime;
         }
     }
 
@@ -37,17 +36,7 @@ public class Presents : MonoBehaviour {
     {
         if (collision.gameObject.tag == "House")
         {
-            if (CameraShake.ReturnShake() != null)
-            {
-                CameraShake.ReturnShake().Shake(0.05f, 0.1f);
-                SoundController.PresentHouseHit.Play();
-
-                gameObject.SetActive(false);
-            }
-            else
-            {
-                Debug.Log("Cam Script is null");
-            }
+            Die();
         }
 
         if (collision.gameObject.tag == "Floor")
@@ -67,5 +56,20 @@ public class Presents : MonoBehaviour {
         Player player = Player.Get();
         player.PresentDelivered();
         SoundController.Chimney.Play();
+    }
+
+    private void Die()
+    {
+        if (CameraShake.ReturnShake() != null)
+        {
+            CameraShake.ReturnShake().Shake(0.05f, 0.1f);
+            SoundController.PresentHouseHit.Play();
+            PresentController.Get().SpawnExploder(transform.position);
+            gameObject.SetActive(false);   
+        }
+        else
+        {
+            Debug.Log("Cam Script is null");
+        }
     }
 }

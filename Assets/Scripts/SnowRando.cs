@@ -61,7 +61,7 @@ namespace Assets.Scripts
             if (countDown <= 0)
             {
                 SpawnSnow();
-                countDown = Random.Range(1, waitForNextMax);
+                countDown = waitForNextMax;
             }
         }
 

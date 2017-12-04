@@ -3,14 +3,19 @@
 public class GlobalTimer : MonoBehaviour {
 
     private static GlobalTimer Singleton;
+    static public GlobalTimer Get() { return Singleton; }
 
     public float _timeTotal;
 
     private string _timerString;
 
+    [SerializeField]
+    private TextMesh _timer = null;
+
     public void Awake()
     {
         Singleton = this;
+
     }
 
     private void Update()
@@ -30,10 +35,6 @@ public class GlobalTimer : MonoBehaviour {
 
     public void OnGUI()
     {
-        Rect rect = new Rect(0, 28, 50, 50);
-        GUIStyle guiStyle = GUIStyle.none;
-        guiStyle.normal.textColor = Color.white;
-
-        GUI.TextArea(rect, "Time: " + _timerString, guiStyle);
+        _timer.text = _timerString;
     }
 }

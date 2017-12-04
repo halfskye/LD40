@@ -23,6 +23,11 @@ public class Player : MonoBehaviour {
 		return _score;
 	}
 
+    [SerializeField]
+    private TextMesh _presentGui = null;
+    [SerializeField]
+    private TextMesh _scoreGui = null;
+
 	private Rigidbody2D _rigidBody = null;
 
 	static private Player _singleton = null;
@@ -57,13 +62,8 @@ public class Player : MonoBehaviour {
 	}
 
 	public void OnGUI() {
-		Rect rect = new Rect(0,0,50,50);
-		GUIStyle guiStyle = GUIStyle.none;
-		guiStyle.normal.textColor = Color.white;
 
-		GUI.TextArea(rect, "PRESENTS: " + _presentCount, guiStyle);
-		rect.y += 15;
-
-		GUI.TextArea(rect, "SCORE: " + _score, guiStyle);
+        _presentGui.text = _presentCount.ToString();
+        _scoreGui.text = _score.ToString();
 	}
 }
