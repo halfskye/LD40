@@ -21,10 +21,13 @@ public class Player : MonoBehaviour {
 		return _score;
 	}
 
+	private Rigidbody2D _rigidBody = null;
+
 	static private Player _singleton = null;
 
 	private void Awake() {
 		_singleton = this;
+		_rigidBody = this.GetComponent<Rigidbody2D>();
 		_presentCount = PRESENT_COUNT_START;
 		_score = 0;
 	}
@@ -39,6 +42,15 @@ public class Player : MonoBehaviour {
 
 	public void PresentDelivered() {
 		_score += 10;
+	}
+
+	private void FixedUpdate() {
+		UpdateMassOnPresents();
+	}
+
+	private void UpdateMassOnPresents() {
+		float newMass = ((float)(_presentCount) / (float)(PRESENT_COUNT_START));
+		_rigidBody.mass = newMass;
 	}
 
 	public void OnGUI() {
