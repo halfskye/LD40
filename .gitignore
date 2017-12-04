@@ -30,3 +30,4 @@
 # Builds
 *.apk
 *.unitypackage
+/Assets/Taylor/GameArt

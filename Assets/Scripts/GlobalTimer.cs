@@ -1,18 +1,12 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 
 public class GlobalTimer : MonoBehaviour {
 
     private static GlobalTimer Singleton;
 
     [SerializeField]
-    private float _timeTotal = 2.0f;
-    public float CurrentTime;
+    private float _timeTotal;
 
-    public Text TimerText;
-
-    private int _seconds;
-    private int _minutes;
     private string _timerString;
 
     public void Awake()
@@ -23,16 +17,24 @@ public class GlobalTimer : MonoBehaviour {
     private void Update()
     {
         _timeTotal -= Time.deltaTime;
-        CurrentTime = _timeTotal;
 
-        _minutes = (int)(_timeTotal % 60);
-        _seconds = (int)(_timeTotal / 60) % 60;
+        var seconds = (int)(_timeTotal % 60);
+        var minutes = (int)(_timeTotal / 60) % 60;
 
-        _timerString = string.Format("{1:00}:{2:00}", _minutes,_seconds);
+        _timerString = string.Format("{0:00}:{1:00}", minutes,seconds);
     }
 
     public static GlobalTimer Timer()
     {
         return Singleton;
+    }
+
+    public void OnGUI()
+    {
+        Rect rect = new Rect(0, 28, 50, 50);
+        GUIStyle guiStyle = GUIStyle.none;
+        guiStyle.normal.textColor = Color.white;
+
+        GUI.TextArea(rect, "Time: " + _timerString, guiStyle);
     }
 }
