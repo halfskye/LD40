@@ -1,12 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SoundController : MonoBehaviour {
 
     public static AudioSource ReleasePresent;
     public static AudioSource Chimney;
     public static AudioSource PresentHouseHit;
+    public static AudioSource SantaurThud;
 
     public float StartVolume = .2f;
 
@@ -17,6 +16,7 @@ public class SoundController : MonoBehaviour {
         ReleasePresent = audio[0];
         Chimney = audio[1];
         PresentHouseHit = audio[2];
+        SantaurThud = audio[3];
 
         StartingVolume();
 	}
@@ -31,6 +31,7 @@ public class SoundController : MonoBehaviour {
         ReleasePresent.volume = StartVolume;
         Chimney.volume = StartVolume;
         PresentHouseHit.volume = StartVolume;
+        SantaurThud.volume = StartVolume;
     }
 
 }

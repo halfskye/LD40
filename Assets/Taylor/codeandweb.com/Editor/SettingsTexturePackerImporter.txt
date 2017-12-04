@@ -7,6 +7,7 @@ tpsheetFileNames:
 - Assets/Taylor/GameArt/SantaurAni1.tpsheet
 - Assets/Taylor/GameArt2/incoming.tpsheet
 - Assets/Taylor/GameArt2/snowyblowy.tpsheet
+- Assets/Taylor/TitleArt/Blowy2.tpsheet
 - Assets/Taylor/TitleArt/House.tpsheet
 - Assets/Taylor/TitleArt/StaticStuff.tpsheet
 - Assets/Taylor/TitleArt/title.tpsheet
@@ -18,12 +19,14 @@ textureFileNames:
 - Assets/Taylor/GameArt/SantaurAni1.png
 - Assets/Taylor/GameArt2/incoming.png
 - Assets/Taylor/GameArt2/snowyblowy.png
+- Assets/Taylor/TitleArt/Blowy2.png
 - Assets/Taylor/TitleArt/House.png
 - Assets/Taylor/TitleArt/StaticStuff.png
 - Assets/Taylor/TitleArt/title.png
 - Assets/Taylor/TitleArt/zammaclogo.png
 normalmapFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
+- 
 - 
 - 
 - 

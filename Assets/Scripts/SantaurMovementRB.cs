@@ -1,7 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using Assets.Scripts;
+using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class SantaurMovementRB : MonoBehaviour {
+
+    private static SantaurMovementRB Singleton;
+    static public SantaurMovementRB Get() { return Singleton; }
 
     public float thrust;
     public float boost;
@@ -23,6 +29,13 @@ public class SantaurMovementRB : MonoBehaviour {
 
     public float FireRate;
     private float _nextFire;
+
+    public bool isDead = false;
+
+    public void Awake()
+    {
+        Singleton = this;
+    }
 
     // Use this for initialization
     void Start () {
@@ -59,6 +72,23 @@ public class SantaurMovementRB : MonoBehaviour {
         {
             _nextFire = Time.time + FireRate;
             SpawnPresent();
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "House" || collision.gameObject.name == "Chimney")
+        {
+            SoundController.SantaurThud.Play();
+
+            PresentController.Get().SpawnExploder(transform.position);
+            PresentController.Get().SpawnExploder(transform.position);
+            PresentController.Get().SpawnExploder(transform.position);
+            PresentController.Get().SpawnExploder(transform.position);
+            PresentController.Get().SpawnExploder(transform.position);
+            PresentController.Get().SpawnExploder(transform.position);
+
+            Destroy(gameObject);
         }
     }
 

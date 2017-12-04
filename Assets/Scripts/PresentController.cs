@@ -9,6 +9,8 @@ namespace Assets.Scripts
 
         [SerializeField]
         private GameObject _snowExploder = null;
+        [SerializeField]
+        private GameObject _presentExploder = null;
 
         private void Awake()
         {
@@ -18,6 +20,12 @@ namespace Assets.Scripts
         public void SpawnExploder(Vector3 pos)
         {
             GameObject explode = Instantiate(_snowExploder);
+            explode.transform.position = pos;
+        }
+
+        public void ChimneyExploder(Vector3 pos)
+        {
+            GameObject explode = Instantiate(_presentExploder);
             explode.transform.position = pos;
         }
     }

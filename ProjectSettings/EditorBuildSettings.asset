@@ -14,3 +14,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Stephen/HowToPlayScene.unity
     guid: 03259953d9fd0154599ae38cdc7d9245
+  - enabled: 1
+    path: Assets/Josh/EndScene.unity
+    guid: d11b12656fa62034fa3a1cd93c037c61
+  - enabled: 1
+    path: Assets/Stephen/LogoScene.unity
+    guid: b60b340e9be72bf46af523b7d9b4a152
+  - enabled: 1
+    path: Assets/Josh/EndTimeScene.unity
+    guid: ae81fd88884dc9f4b82db164657cdad1

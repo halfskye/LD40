@@ -8,7 +8,7 @@ public class RocketManElfSupply : MonoBehaviour {
 	private float _speed = 10;
 
 	[SerializeField]
-	private int _presentSupplyCount = 10;
+	private int _presentSupplyCount = 25;
 	public int GetSupplyCount() {
 		return _presentSupplyCount;
 	}
@@ -96,7 +96,7 @@ public class RocketManElfSupply : MonoBehaviour {
 	}
 
 	private void FindTarget() {
-		//@TODO: Find Player
+        //@TODO: Find Player
 		_target = Player.Get();
 		// Vector2 playerPos = _target.GetPos();
 	}

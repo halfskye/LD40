@@ -51,11 +51,12 @@ public class Presents : MonoBehaviour {
     }
 
     private void EnterChimney() {
-        gameObject.SetActive(false);
 
+        //PresentController.Get().ChimneyExploder(transform.position);
         Player player = Player.Get();
         player.PresentDelivered();
         SoundController.Chimney.Play();
+        gameObject.SetActive(false);  
     }
 
     private void Die()
