@@ -5,7 +5,7 @@ using UnityEngine;
 public class SupplyManager : MonoBehaviour {
 
 	[SerializeField]
-	private GameObject _supplyPrefab = null;
+	private GameObject[] _supplyPrefabs = null;
 
 	[SerializeField]
 	private Transform _supplyStartPos = null;
@@ -50,7 +50,8 @@ public class SupplyManager : MonoBehaviour {
 
 	private void CreateSupply() {
 		//@TODO: Instantiate supply...
-		GameObject go = Instantiate(_supplyPrefab, _supplyStartPos);
+		GameObject randomSupplyPrefab = _supplyPrefabs[Random.Range(0,_supplyPrefabs.Length)];
+		GameObject go = Instantiate(randomSupplyPrefab, _supplyStartPos);
 		RocketManElfSupply supply = go.GetComponent<RocketManElfSupply>();
 		int supplyCount = supply.GetSupplyCount();
 		Player player = Player.Get();

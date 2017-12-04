@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 10
-  _presentSupplyCount: 50
+  _presentSupplyCount: 25
   _settleInTime: 0.5
   _deliverSupplyTime: 2
 --- !u!212 &212590170365194606
