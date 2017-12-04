@@ -4,14 +4,14 @@ tpsheetFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.tpsheet
 - Assets/Taylor/GameArt/ElfmanJohn3way.tpsheet
 - Assets/Taylor/GameArt/GroundAni1.tpsheet
-- Assets/Taylor/GameArt/Incoming.tpsheet
 - Assets/Taylor/GameArt/SantaurAni1.tpsheet
+- Assets/Taylor/GameArt2/incoming.tpsheet
 textureFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.png
 - Assets/Taylor/GameArt/ElfmanJohn3way.png
 - Assets/Taylor/GameArt/GroundAni1.png
-- Assets/Taylor/GameArt/Incoming.png
 - Assets/Taylor/GameArt/SantaurAni1.png
+- Assets/Taylor/GameArt2/incoming.png
 normalmapFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
 - 

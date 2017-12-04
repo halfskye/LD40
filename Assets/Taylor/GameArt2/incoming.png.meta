@@ -1,0 +1,301 @@
+fileFormatVersion: 2
+guid: 25f5e52d15e299b4989ef280cc827e36
+timeCreated: 1512361579
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Incoming_000
+    21300002: Incoming_001
+    21300004: Incoming_002
+    21300006: Incoming_003
+    21300008: Incoming_004
+    21300010: Incoming_005
+    21300012: Incoming_006
+    21300014: Incoming_007
+    21300016: Incoming_008
+    21300018: Incoming_009
+    21300020: Incoming_010
+    21300022: Incoming_011
+    21300024: Incoming_012
+    21300026: Incoming_013
+    21300028: Incoming_014
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Incoming_000
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 41
+        width: 1
+        height: 1
+      alignment: 9
+      pivot: {x: 154.5, y: -61}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Incoming_001
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 449
+        width: 304
+        height: 62
+      alignment: 9
+      pivot: {x: 0.50164473, y: 0.48387095}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Incoming_002
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 385
+        width: 304
+        height: 62
+      alignment: 9
+      pivot: {x: 0.50164473, y: 0.46774194}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Incoming_003
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 321
+        width: 304
+        height: 62
+      alignment: 9
+      pivot: {x: 0.50164473, y: 0.46774194}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Incoming_004
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 347
+        width: 307
+        height: 63
+      alignment: 9
+      pivot: {x: 0.49674267, y: 0.46031746}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Incoming_005
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 89
+        width: 299
+        height: 68
+      alignment: 9
+      pivot: {x: 0.5033445, y: 0.42647058}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Incoming_006
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 159
+        width: 303
+        height: 76
+      alignment: 9
+      pivot: {x: 0.5, y: 0.39473686}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Incoming_007
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 237
+        width: 302
+        height: 82
+      alignment: 9
+      pivot: {x: 0.49834436, y: 0.41463414}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Incoming_008
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 220
+        width: 301
+        height: 99
+      alignment: 9
+      pivot: {x: 0.49667773, y: 0.3838384}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Incoming_009
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 412
+        width: 307
+        height: 99
+      alignment: 9
+      pivot: {x: 0.49674267, y: 0.42424244}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Incoming_010
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 48
+        width: 307
+        height: 105
+      alignment: 9
+      pivot: {x: 0.5, y: 0.44761905}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Incoming_011
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 44
+        width: 306
+        height: 109
+      alignment: 9
+      pivot: {x: 0.49509802, y: 0.44036698}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Incoming_012
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 155
+        width: 308
+        height: 113
+      alignment: 9
+      pivot: {x: 0.5016234, y: 0.460177}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Incoming_013
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 270
+        width: 308
+        height: 119
+      alignment: 9
+      pivot: {x: 0.49837664, y: 0.48739496}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Incoming_014
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 391
+        width: 309
+        height: 120
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48333332}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
