@@ -6,14 +6,17 @@ tpsheetFileNames:
 - Assets/Taylor/GameArt/GroundAni1.tpsheet
 - Assets/Taylor/GameArt/SantaurAni1.tpsheet
 - Assets/Taylor/GameArt2/incoming.tpsheet
+- Assets/Taylor/GameArt2/snowyblowy.tpsheet
 textureFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.png
 - Assets/Taylor/GameArt/ElfmanJohn3way.png
 - Assets/Taylor/GameArt/GroundAni1.png
 - Assets/Taylor/GameArt/SantaurAni1.png
 - Assets/Taylor/GameArt2/incoming.png
+- Assets/Taylor/GameArt2/snowyblowy.png
 normalmapFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
+- 
 - 
 - 
 - 
