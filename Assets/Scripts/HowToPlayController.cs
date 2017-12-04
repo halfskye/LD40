@@ -49,6 +49,6 @@ public class HowToPlayController : MonoBehaviour {
         Debug.Log("Waiting");
         yield return new WaitForSeconds(2f);
         Debug.Log("Loading Scene");
-        //SceneManager.LoadScene("TS");
+        SceneManager.LoadScene("TS");
     }
 }

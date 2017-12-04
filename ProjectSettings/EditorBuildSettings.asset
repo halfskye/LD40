@@ -8,3 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Josh/TS.unity
     guid: dbb4d3e0125cb5a4485d80cd193dbd1b
+  - enabled: 1
+    path: Assets/Stephen/TitleScene.unity
+    guid: 3cf98b1526b67ea4f8449cbb7ee96db6
+  - enabled: 1
+    path: Assets/Stephen/HowToPlayScene.unity
+    guid: 03259953d9fd0154599ae38cdc7d9245
