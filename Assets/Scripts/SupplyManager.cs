@@ -11,26 +11,38 @@ public class SupplyManager : MonoBehaviour {
 	private Transform _supplyStartPos = null;
 
 	[SerializeField]
-	private int _presentCountThreshold = 495;
+	private float _presentCountThresholdPct = 95.0f;
 
 	[SerializeField]
 	private float _waitBetweenSupply = 5;
 	private float _supplyTimer;
 
+	private int _targetPresentTresholdForResupply;
+
+	private void Start() {
+		Player player = Player.Get();
+		int presentCount = player.GetPresents();
+		SetNewResupplyThreshold(presentCount);
+	}
+
+	private void SetNewResupplyThreshold(int presentCount) {
+		_targetPresentTresholdForResupply = (int)(presentCount * (_presentCountThresholdPct/100.0f));
+	}
+
 	private void Update() {
+		_supplyTimer -= Time.deltaTime;
+
 		//@TODO: Check if we need to spawn supply.
 		if(NeedSupply()) {
 			CreateSupply();
 		}
-
-		_supplyTimer -= Time.deltaTime;
 	}
 
 	private bool NeedSupply() {
 		if(_supplyTimer < 0.0f) {
 			Player player = Player.Get();
 			int presentCount = player.GetPresents();
-			return (presentCount < _presentCountThreshold);
+			return (presentCount <= _targetPresentTresholdForResupply);
 		}
 
 		return false;
@@ -39,6 +51,12 @@ public class SupplyManager : MonoBehaviour {
 	private void CreateSupply() {
 		//@TODO: Instantiate supply...
 		GameObject go = Instantiate(_supplyPrefab, _supplyStartPos);
+		RocketManElfSupply supply = go.GetComponent<RocketManElfSupply>();
+		int supplyCount = supply.GetSupplyCount();
+		Player player = Player.Get();
+		int presentCount = player.GetPresents();
+		int expectedNewCount = presentCount + supplyCount;
+		SetNewResupplyThreshold(expectedNewCount);
 
 		// Reset supply timer;
 		_supplyTimer = _waitBetweenSupply;

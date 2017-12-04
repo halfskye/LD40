@@ -9,6 +9,9 @@ public class RocketManElfSupply : MonoBehaviour {
 
 	[SerializeField]
 	private int _presentSupplyCount = 10;
+	public int GetSupplyCount() {
+		return _presentSupplyCount;
+	}
 
 	[SerializeField]
 	private float _settleInTime = 2.0f;

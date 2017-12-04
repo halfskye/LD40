@@ -1,11 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour {
 
-	const int PRESENT_COUNT_START = 500;
-	private int _presentCount = PRESENT_COUNT_START;
+	[SerializeField]
+	private int PRESENT_COUNT_START = 100;
+	private int _presentCount;
 	public int GetPresents() {
 		return _presentCount;
 	}
