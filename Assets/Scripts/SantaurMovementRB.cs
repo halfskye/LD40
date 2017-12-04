@@ -19,6 +19,8 @@ public class SantaurMovementRB : MonoBehaviour {
     private List<GameObject> _presentPool;
     public int PresentAmountEach = 100;
 
+    private Player _player = null;
+
     // Use this for initialization
     void Start () {
         rb = GetComponent<Rigidbody2D>();
@@ -40,6 +42,8 @@ public class SantaurMovementRB : MonoBehaviour {
                 _presentPool.Add(obj);
             }
         }
+
+        _player = Player.Get();
     }
 
 	// Update is called once per frame
@@ -48,7 +52,7 @@ public class SantaurMovementRB : MonoBehaviour {
         Movement();
         Barriers();
 
-        if (_keyPresents())
+        if (_keyPresents() && _player.HasPresents())
         {
             SpawnPresent();
         }

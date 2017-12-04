@@ -8,6 +8,9 @@ public class Player : MonoBehaviour {
 	public int GetPresents() {
 		return _presentCount;
 	}
+	public bool HasPresents() {
+		return (_presentCount > 0);
+	}
 	public void UsePresent() {
 		_presentCount -= 1;
 	}
