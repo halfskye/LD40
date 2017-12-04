@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 50060944745891902}
   - component: {fileID: 61935662620099792}
   - component: {fileID: 114050570941357516}
+  - component: {fileID: 95910739196148692}
   m_Layer: 0
   m_Name: Test-Santa
   m_TagString: Player
@@ -90,6 +91,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.4, y: 0.51}
   m_EdgeRadius: 0
+--- !u!95 &95910739196148692
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1516426988309762}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bbfe71ca49cec4c9d81f238efc786d69, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114050570941357516
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -101,6 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c83417d7a7f9342029f36f1951d18779, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PRESENT_COUNT_START: 100
 --- !u!114 &114172577245279196
 MonoBehaviour:
   m_ObjectHideFlags: 1
