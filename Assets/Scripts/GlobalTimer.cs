@@ -4,8 +4,7 @@ public class GlobalTimer : MonoBehaviour {
 
     private static GlobalTimer Singleton;
 
-    [SerializeField]
-    private float _timeTotal;
+    public float _timeTotal;
 
     private string _timerString;
 
