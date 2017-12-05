@@ -10,6 +10,7 @@ public class SantaurMovementRB : MonoBehaviour {
     static public SantaurMovementRB Get() { return Singleton; }
 
     public float thrust;
+    public float downThrust;
     public float boost;
     public Rigidbody2D rb;
     public float leftWall;
@@ -18,6 +19,7 @@ public class SantaurMovementRB : MonoBehaviour {
 
     private bool _keyLeft() { return (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)); }
     private bool _keyRight() { return (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)); }
+    private bool _keyDown() { return (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)); }
     private bool _keyPresents() { return (Input.GetKeyDown(KeyCode.Space)); }
 
     //Object Pooling
@@ -40,7 +42,8 @@ public class SantaurMovementRB : MonoBehaviour {
     // Use this for initialization
     void Start () {
         rb = GetComponent<Rigidbody2D>();
-        thrust = 7;
+        thrust = 21;
+        downThrust = 14;
         boost = 150;
         rb.drag = 3;
         rb.gravityScale = .2f;
@@ -105,6 +108,11 @@ public class SantaurMovementRB : MonoBehaviour {
         if (_keyLeft())
         {
             rb.AddForce(Vector2.left * thrust);
+        }
+
+        if (_keyDown())
+        {
+            rb.AddForce(Vector2.down * downThrust);
         }
     }
 
