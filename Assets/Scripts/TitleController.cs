@@ -58,7 +58,7 @@ public class TitleController : MonoBehaviour {
         StartVolume = .9f;
         SantaursSleigh.volume = StartVolume;
         Select.volume = .4f;
-        Sparkle.volume = .2f;
+        Sparkle.volume = .4f;
     }
 
     public static void InitializeAudio()
