@@ -84,6 +84,10 @@ MonoBehaviour:
   - {fileID: 1567610697442322, guid: b41422e6545eb4d33aacdc189f178d68, type: 2}
   - {fileID: 1274075109104204, guid: ce9151a613e52472d9b9f257e6a65685, type: 2}
   - {fileID: 1320869685125252, guid: 9a93fcb6d4f994278b761886dd82e575, type: 2}
+  _supplyWeights:
+  - 50
+  - 25
+  - 10
   _supplyStartPos: {fileID: 4872322021078914}
   _presentCountThresholdPct: 95
   _waitBetweenSupply: 5

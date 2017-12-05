@@ -8,6 +8,10 @@ public class SupplyManager : MonoBehaviour {
 	private GameObject[] _supplyPrefabs = null;
 
 	[SerializeField]
+	private float[] _supplyWeights = null;
+	private float _totalWeightSum;
+
+	[SerializeField]
 	private Transform _supplyStartPos = null;
 
 	[SerializeField]
@@ -18,6 +22,12 @@ public class SupplyManager : MonoBehaviour {
 	private float _supplyTimer;
 
 	private int _targetPresentTresholdForResupply;
+
+	private void Awake() {
+		foreach(float weight in _supplyWeights) {
+			_totalWeightSum += weight;
+		}
+	}
 
 	private void Start() {
 		Player player = Player.Get();
@@ -53,7 +63,9 @@ public class SupplyManager : MonoBehaviour {
 		// SoundController.ElfAlert.Play();
 
 		// Instantiate supply...
-		GameObject randomSupplyPrefab = _supplyPrefabs[Random.Range(0,_supplyPrefabs.Length)];
+		// int supplyIndex = Random.Range(0,_supplyPrefabs.Length);
+		int supplyIndex = GetWeightedSupplyIndex();
+		GameObject randomSupplyPrefab = _supplyPrefabs[supplyIndex];
 		GameObject go = Instantiate(randomSupplyPrefab, _supplyStartPos);
 
 		// Adjust new resupply threshold based on incoming supply.
@@ -66,5 +78,19 @@ public class SupplyManager : MonoBehaviour {
 
 		// Reset supply timer;
 		_supplyTimer = _waitBetweenSupply;
+	}
+
+	private int GetWeightedSupplyIndex() {
+		float weightedRandom = Random.Range(0, _totalWeightSum);
+		float weightIndex = 0.0f;
+		int index = 0;
+		foreach(float weight in _supplyWeights) {
+			weightIndex += weight;
+			if(weightedRandom < weightIndex) {
+				return index;
+			}
+			++index;
+		}
+		return 0;
 	}
 }
