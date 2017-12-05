@@ -42,6 +42,10 @@ public class RocketManElfSupply : MonoBehaviour {
 		StartSettleIn();
 	}
 
+	private void Start() {
+		SoundController.Jetpack.Play();
+	}
+
 	private void StartSettleIn() {
 		_state = States.SETTLE_IN;
 
@@ -56,6 +60,8 @@ public class RocketManElfSupply : MonoBehaviour {
 
 	private void StartDeliverSupply() {
 		_state = States.DELIVER_SUPPLY;
+
+		SoundController.Sparkle.Play();
 
 		_timer = _deliverSupplyTime;
 	}
@@ -109,13 +115,14 @@ public class RocketManElfSupply : MonoBehaviour {
 		if(_timer < 0.0f) {
 			GivePresents();
 			StartJetOff();
-            StarExploder(Player.Get().GetPos());
-        }
+    }
 	}
 
 	private void GivePresents() {
 		Player player = Player.Get();
 		player.ReceivePresents(_presentSupplyCount);
+		StarExploder(Player.Get().GetPos());
+		SoundController.DeliveredPayload.Play();
 	}
 
     private void StarExploder(Vector3 pos)
@@ -200,5 +207,9 @@ public class RocketManElfSupply : MonoBehaviour {
 
 	private void OnBecameInvisible() {
 		Destroy(this.gameObject);
+	}
+
+	private void OnDestroy() {
+		SoundController.Jetpack.Stop();
 	}
 }

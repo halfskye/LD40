@@ -49,9 +49,14 @@ public class SupplyManager : MonoBehaviour {
 	}
 
 	private void CreateSupply() {
-		//@TODO: Instantiate supply...
+		// Play incoming alert SFX...
+		SoundController.ElfAlert.Play();
+
+		// Instantiate supply...
 		GameObject randomSupplyPrefab = _supplyPrefabs[Random.Range(0,_supplyPrefabs.Length)];
 		GameObject go = Instantiate(randomSupplyPrefab, _supplyStartPos);
+
+		// Adjust new resupply threshold based on incoming supply.
 		RocketManElfSupply supply = go.GetComponent<RocketManElfSupply>();
 		int supplyCount = supply.GetSupplyCount();
 		Player player = Player.Get();
