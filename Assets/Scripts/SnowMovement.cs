@@ -3,10 +3,14 @@ using UnityEngine;
 
 public class SnowMovement : MonoBehaviour {
 
+    private float _rotationSpeed = 5;
+
     void Update()
     {
-        transform.Rotate(Vector3.left * Time.deltaTime * 10);
-        transform.Translate(Vector2.down * SnowRando.Get().GetSnowSpeed() * Time.deltaTime);
+        transform.Translate(Vector2.down * 5 * Time.deltaTime);
+
+        var angle = (Mathf.Sin(Time.time * _rotationSpeed) + 1.0) / 2.0 * 360;
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.identity, _rotationSpeed * Time.deltaTime);
     }
 
     void OnTriggerEnter2D(Collider2D collision)

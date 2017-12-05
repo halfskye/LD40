@@ -2112,7 +2112,7 @@ MonoBehaviour:
   SnowAmountTotal: 0
   SnowAmountSingle: 10
   waitForNextMax: 0.05
-  countDown: 0
+  countDown: 1
   xMin: -6
   xMax: 6
   yMin: 5
@@ -2538,7 +2538,7 @@ MonoBehaviour:
   SnowAmountTotal: 0
   SnowAmountSingle: 10
   waitForNextMax: 0.05
-  countDown: 0
+  countDown: 0.5
   xMin: -6
   xMax: 6
   yMin: 5
