@@ -119,8 +119,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _starExploder: {fileID: 1650543262597818, guid: 4be146ded5ac10545bbe51a9f3cf2b00,
     type: 2}
-  _speedForSettleIn: 2
-  _speedToPlayer: 7.5
+  _speedForSettleIn: 1.75
+  _speedToPlayer: 6
   _speedForDelivery: 75
   _speedForJetoff: 30
   _presentSupplyCount: 50
