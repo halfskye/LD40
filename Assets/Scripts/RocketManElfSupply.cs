@@ -36,6 +36,8 @@ public class RocketManElfSupply : MonoBehaviour {
 
 	private float _timer;
 
+	private Vector3 _screenPos;
+
 	private void Awake() {
 		_rigidBody = this.GetComponent<Rigidbody2D>();
 
@@ -71,6 +73,11 @@ public class RocketManElfSupply : MonoBehaviour {
 	}
 
 	private void Update() {
+		_screenPos = Camera.main.WorldToScreenPoint(this.transform.position);
+		if(_screenPos.x <= 0.0f) {
+			Destroy(this.gameObject);
+		}
+
 		switch(_state) {
 			case States.SETTLE_IN: {
 				UpdateSettleIn();
@@ -186,16 +193,6 @@ public class RocketManElfSupply : MonoBehaviour {
 		_rigidBody.AddForce(velocity, ForceMode2D.Force);
 	}
 
-	// private void OnCollisionEnter2D(Collision2D collision)
-	// {
-	// 		if(_state == States.TARGET_PLAYER) {
-	// 			if (collision.gameObject.tag == "Player")
-	// 			{
-	// 					StartDeliverSupply();
-	// 			}
-	// 		}
-	// }
-
 	private void OnTriggerEnter2D(Collider2D collider) {
 		if(_state == States.TARGET_PLAYER) {
 			if (collider.gameObject.tag == "Player")
@@ -205,11 +202,13 @@ public class RocketManElfSupply : MonoBehaviour {
 		}
 	}
 
-	private void OnBecameInvisible() {
-		Destroy(this.gameObject);
-	}
-
 	private void OnDestroy() {
 		SoundController.Jetpack.Stop();
 	}
+
+	// private void OnGUI() {
+	// 	_screenPos = Camera.main.WorldToScreenPoint(this.transform.position);
+	// 	Rect rect = new Rect(50,50,100,100);
+	// 	GUI.Label(rect, _screenPos.x.ToString());
+	// }
 }
