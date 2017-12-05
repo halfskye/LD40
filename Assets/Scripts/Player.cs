@@ -14,9 +14,6 @@ public class Player : MonoBehaviour {
 	public void UsePresent() {
 		_presentCount -= 1;
 	}
-	public void ReceivePresents(int amount) {
-		_presentCount += amount;
-	}
 
 	private int _score = 0;
 	public int GetScore() {
@@ -59,6 +56,14 @@ public class Player : MonoBehaviour {
 		float presentMassNumerator = Mathf.Max(_presentCount, PRESENT_COUNT_START);
 		float newMass = (presentMassNumerator / (float)(PRESENT_COUNT_START));
 		_rigidBody.mass = newMass;
+	}
+
+	public void ReceivePresents(int amount) {
+		_presentCount += amount;
+
+		// Add force down when receiving a load...
+		Vector3 velocity = Vector3.down * amount / 15.0f;
+		_rigidBody.AddForce(velocity, ForceMode2D.Impulse);
 	}
 
 	public void OnGUI() {
