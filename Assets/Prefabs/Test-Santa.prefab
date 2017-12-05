@@ -40,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1516426988309762}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.2594056, y: 2.1989286, z: 0}
+  m_LocalPosition: {x: -3.07, y: 1.86, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -120,6 +120,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PRESENT_COUNT_START: 100
+  _presentGui: {fileID: 0}
+  _scoreGui: {fileID: 0}
 --- !u!114 &114172577245279196
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -132,6 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thrust: 0
+  downThrust: 0
   boost: 0
   rb: {fileID: 50060944745891902}
   leftWall: 0
@@ -144,6 +147,7 @@ MonoBehaviour:
   - {fileID: 1903480404798066, guid: 23cea6f4efe91e34ca891f2c94ad2bb2, type: 2}
   PresentAmountEach: 10
   FireRate: 0.25
+  isDead: 1
 --- !u!114 &114335757679753930
 MonoBehaviour:
   m_ObjectHideFlags: 1

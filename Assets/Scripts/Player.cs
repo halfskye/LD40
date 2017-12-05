@@ -50,7 +50,9 @@ public class Player : MonoBehaviour {
 
 	private void FixedUpdate() {
 		UpdateMassOnPresents();
-	}
+        _presentGui.text = _presentCount.ToString();
+        _scoreGui.text = _score.ToString();
+    }
 
 	private void UpdateMassOnPresents() {
 		float presentMassNumerator = Mathf.Max(_presentCount, PRESENT_COUNT_START);
@@ -68,7 +70,6 @@ public class Player : MonoBehaviour {
 
 	public void OnGUI() {
 
-        _presentGui.text = _presentCount.ToString();
-        _scoreGui.text = _score.ToString();
+        
 	}
 }

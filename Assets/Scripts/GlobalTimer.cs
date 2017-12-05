@@ -30,6 +30,7 @@ public class GlobalTimer : MonoBehaviour {
         var minutes = (int)(_timeTotal / 60) % 60;
 
         _timerString = string.Format("{0:00}:{1:00}", minutes,seconds);
+        _timer.text = _timerString;
 
         if (!Santaur)
         {
@@ -49,7 +50,7 @@ public class GlobalTimer : MonoBehaviour {
 
     public void OnGUI()
     {
-        _timer.text = _timerString;
+        
     }
 
     IEnumerator LoadNextLevel(float delay, string level)
