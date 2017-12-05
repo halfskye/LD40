@@ -50,7 +50,7 @@ public class SupplyManager : MonoBehaviour {
 
 	private void CreateSupply() {
 		// Play incoming alert SFX...
-		SoundController.ElfAlert.Play();
+		// SoundController.ElfAlert.Play();
 
 		// Instantiate supply...
 		GameObject randomSupplyPrefab = _supplyPrefabs[Random.Range(0,_supplyPrefabs.Length)];
