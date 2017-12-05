@@ -3,12 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class RocketManElfSupply : MonoBehaviour {
-
-    [SerializeField]
-    private GameObject _starExploder = null;
+	[SerializeField]
+  private GameObject _starExploder = null;
 
 	[SerializeField]
-	private float _speed = 10;
+	private float _speedForSettleIn = 2.0f;
+	[SerializeField]
+	private float _speedToPlayer = 10.0f;
+	[SerializeField]
+	private float _speedForDelivery = 100.0f;
+	[SerializeField]
+	private float _speedForJetoff = 30.0f;
 
 	[SerializeField]
 	private int _presentSupplyCount = 25;
@@ -167,7 +172,7 @@ public class RocketManElfSupply : MonoBehaviour {
 	}
 
 	private void FixedUpdateSettleIn() {
-		Vector3 velocity = Vector3.down * 2.0f;
+		Vector3 velocity = Vector3.down * _speedForSettleIn;
 		_rigidBody.AddForce(velocity, ForceMode2D.Force);
 	}
 
@@ -175,7 +180,7 @@ public class RocketManElfSupply : MonoBehaviour {
 		Vector3 playerPos = _target.GetPos();
 		Vector3 dirToPlayer = (playerPos - transform.position).normalized;
 
-		Vector3 velocity = dirToPlayer * _speed;
+		Vector3 velocity = dirToPlayer * _speedToPlayer;
 		_rigidBody.AddForce(velocity, ForceMode2D.Force);
 	}
 
@@ -183,13 +188,13 @@ public class RocketManElfSupply : MonoBehaviour {
 		Vector3 playerPos = _target.GetPos();
 		Vector3 dirToPlayer = (playerPos - transform.position).normalized;
 
-		Vector3 velocity = dirToPlayer * 100.0f;
+		Vector3 velocity = dirToPlayer * _speedForDelivery;
 		// _rigidBody.velocity = dirToPlayer * 500.0f;
 		_rigidBody.AddForce(velocity, ForceMode2D.Force);
 	}
 
 	private void FixedUpdateJetOff() {
-		Vector3 velocity = Vector3.left * 30.0f;
+		Vector3 velocity = Vector3.left * _speedForJetoff;
 		_rigidBody.AddForce(velocity, ForceMode2D.Force);
 	}
 
