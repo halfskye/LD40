@@ -40,7 +40,7 @@ public class SantaurMovementRB : MonoBehaviour {
     // Use this for initialization
     void Start () {
         rb = GetComponent<Rigidbody2D>();
-        thrust = 7;
+        thrust = 21;
         boost = 150;
         rb.drag = 3;
         rb.gravityScale = .2f;
