@@ -12,13 +12,23 @@ public class TitleController : MonoBehaviour {
     public float StartVolume;
     private bool _nextScene;
     private bool _startSelect;
+    private float _inputDelay;
+    public GameObject ZMLogo;
+    public GameObject House;
+    public GameObject Controls;
 
     // Use this for initialization
     void Awake () {
-        DontDestroyOnLoad(this);
+        //DontDestroyOnLoad(this);
+        ZMLogo = Instantiate(Resources.Load("back1")) as GameObject;
+        
+        _inputDelay = 11.2f;
         _nextScene = false;
         _startSelect = false;
         StartCoroutine(WaitForTitle());
+        StartCoroutine(DestroyZMLogo());
+        StartCoroutine(ShowTitleCard());
+        StartCoroutine(ShowControls());
         AudioSource[] audio = GetComponents<AudioSource>();
         SantaursSleigh = audio[0];
         Select = audio[1];
@@ -32,7 +42,7 @@ public class TitleController : MonoBehaviour {
 		
         if (_select() && (_nextScene == false) && _startSelect == true)
         {
-                WaitForNextScene();
+                StartCoroutine(WaitForNextScene());
                 _nextScene = true;
         }
 
@@ -68,6 +78,30 @@ public class TitleController : MonoBehaviour {
         }
     }
 
+    IEnumerator DestroyZMLogo()
+    {
+        yield return new WaitForSeconds(5.8f);
+        GameObject.Destroy(ZMLogo);
+    }
+
+    IEnumerator ShowTitleCard()
+    {
+        //Destroy ZM logo and display title card
+        yield return new WaitForSeconds(11.55f);
+        //Resources.UnloadAsset(ZMLogo);
+        House = Instantiate(Resources.Load("Title_000")) as GameObject;
+        
+        //TitleCard = Instantiate(Resources.Load("Title/TITLE")) as GameObject;
+    }
+
+    IEnumerator ShowControls()
+    {
+        //yield return new WaitForSeconds(22.95f);
+        yield return new WaitForSeconds(20f);
+        GameObject.Destroy(House);
+        Controls = Instantiate(Resources.Load("controls")) as GameObject;
+    }
+
     IEnumerator WaitForTitle()
     {
         yield return new WaitForSeconds(11.5f);
@@ -75,13 +109,14 @@ public class TitleController : MonoBehaviour {
         
     }
 
-    public void WaitForNextScene()
+    IEnumerator WaitForNextScene()
     {
         Select.Play();
-        //Debug.Log("Waiting");
-        //yield return new WaitForSeconds(2f);
+        SantaursSleigh.Stop();
+        Debug.Log("Waiting");
+        yield return new WaitForSeconds(2.8f);
         Debug.Log("Loading Scene");
-        SceneManager.LoadScene("HowToPlayScene");
+        SceneManager.LoadScene("TS");
     }
 
 }
