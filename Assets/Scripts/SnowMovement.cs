@@ -10,7 +10,7 @@ public class SnowMovement : MonoBehaviour {
 
     private void MoveAndSpin()
     {
-        transform.Translate(Vector2.down * 3 * Time.deltaTime);
+        transform.Translate(Vector2.down * 1.5f * Time.deltaTime);
     }
 
     void OnTriggerEnter2D(Collider2D collision)
