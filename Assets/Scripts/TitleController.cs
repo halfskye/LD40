@@ -9,6 +9,7 @@ public class TitleController : MonoBehaviour {
 
     public static AudioSource SantaursSleigh;
     public static AudioSource Select;
+    public static AudioSource Sparkle;
     public float StartVolume;
     private bool _nextScene;
     private bool _startSelect;
@@ -29,9 +30,11 @@ public class TitleController : MonoBehaviour {
         StartCoroutine(DestroyZMLogo());
         StartCoroutine(ShowTitleCard());
         StartCoroutine(ShowControls());
+        StartCoroutine(PlaySparkle());
         AudioSource[] audio = GetComponents<AudioSource>();
         SantaursSleigh = audio[0];
         Select = audio[1];
+        Sparkle = audio[2];
         StartingVolume();
         InitializeAudio();
 
@@ -55,6 +58,7 @@ public class TitleController : MonoBehaviour {
         StartVolume = .9f;
         SantaursSleigh.volume = StartVolume;
         Select.volume = .4f;
+        Sparkle.volume = .2f;
     }
 
     public static void InitializeAudio()
@@ -78,9 +82,16 @@ public class TitleController : MonoBehaviour {
         }
     }
 
+    IEnumerator PlaySparkle()
+    {
+        yield return new WaitForSeconds(5.4f);
+        Sparkle.Play();
+    }
+
     IEnumerator DestroyZMLogo()
     {
         yield return new WaitForSeconds(5.8f);
+        
         GameObject.Destroy(ZMLogo);
     }
 
