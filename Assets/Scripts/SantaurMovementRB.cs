@@ -81,6 +81,8 @@ public class SantaurMovementRB : MonoBehaviour {
         {
             SoundController.SantaurThud.Play();
 
+            MusicController.SpecialDelivery.Stop();
+
             PresentController.Get().SpawnExploder(transform.position);
             PresentController.Get().SpawnExploder(transform.position);
             PresentController.Get().SpawnExploder(transform.position);
