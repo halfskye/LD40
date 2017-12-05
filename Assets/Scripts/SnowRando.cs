@@ -72,7 +72,7 @@ namespace Assets.Scripts
                 GameObject gameObj = _snowPool[Random.Range(0, _snowPool.Count)];
                 if (!gameObj.activeInHierarchy)
                 {
-                    gameObj.transform.position = new Vector2(Random.Range(xMin, xMax), Random.Range(yMin, yMax));
+                    gameObj.transform.position = new Vector3(Random.Range(xMin, xMax), Random.Range(yMin, yMax), -5);
                     gameObj.SetActive(true);
                 }
             }
